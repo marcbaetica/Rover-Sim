@@ -12,9 +12,9 @@ cubeStartPos = [0, 0, 1]
 cubeStartOrientation = p.getQuaternionFromEuler([0, 0, 0])
 boxId = p.loadURDF("r2d2.urdf", cubeStartPos, cubeStartOrientation)
 
-for i in range (10000):
-   p.stepSimulation()
-   time.sleep(1./240.)
+for i in range(10000):
+    p.stepSimulation()
+    time.sleep(1. / 240.)
 cubePos, cubeOrn = p.getBasePositionAndOrientation(boxId)
 print(cubePos, cubeOrn)
 
